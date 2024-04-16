@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="jp" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ブーリアン機能 &mdash; KSYN OPS 2024-04-13 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=1a527e0a"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ミラー機能" href="%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E6%A9%9F%E8%83%BD.html" />
+    <link rel="prev" title="Welcome to KSYN OPS&#39;s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            KSYN OPS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ブーリアン機能</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#miniconda-install">概要</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">ブーリアン(マルチオブジェクト)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">シングルブーリアン</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">スライス機能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#miniconda-setting">ブーリアンパネル</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boolean-apply">ブーリアンアプライ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#boolean-demo-gousei">ブーリアンの便利な使い方</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E6%A9%9F%E8%83%BD.html">ミラー機能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E6%A9%9F%E8%83%BD.html#id2">人ものさし</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E6%A9%9F%E8%83%BD.html#id4">エンプティの挿入</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E6%A9%9F%E8%83%BD.html#id6">マテリアルの適応</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">KSYN OPS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ブーリアン機能</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/data/ブーリアン機能.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="miniconda">
+<span id="id1"></span><h1>ブーリアン機能<a class="headerlink" href="#miniconda" title="Link to this heading"></a></h1>
+<img alt="../_images/job_3d_cad_designer.png" src="../_images/job_3d_cad_designer.png" />
+<section id="miniconda-install">
+<span id="id2"></span><h2>概要<a class="headerlink" href="#miniconda-install" title="Link to this heading"></a></h2>
+<figure class="align-default">
+<a class="controls reference internal image-reference" href="../_images/boolean_demo.mp4"><video controls="controls" height="300" src="../_images/boolean_demo.mp4" title="../_images/boolean_demo.mp4" width="500"><a href="../_images/boolean_demo.mp4">../_images/boolean_demo.mp4</a></video></a>
+</figure>
+<p>デフォルの設定では最後に選択されたオブジェクトにブーリアンが適応されます。
+自動で親子化機能も搭載されていますので、ブーリアンされたオブジェクトを移動しても形が崩れる事はありません。
+「複数でブール」を押すと最後に選択されたオブジェクトが複数のオブジェクトに適応されます。</p>
+<section id="id3">
+<h3>ブーリアン(マルチオブジェクト)<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<figure class="align-default">
+<a class="controls reference internal image-reference" href="../_images/boolean_demo_マルチブーリアン.mp4"><video controls="controls" height="300" src="../_images/boolean_demo_%E3%83%9E%E3%83%AB%E3%83%81%E3%83%96%E3%83%BC%E3%83%AA%E3%82%A2%E3%83%B3.mp4" title="../_images/boolean_demo_%E3%83%9E%E3%83%AB%E3%83%81%E3%83%96%E3%83%BC%E3%83%AA%E3%82%A2%E3%83%B3.mp4" width="500"><a href="../_images/boolean_demo_%E3%83%9E%E3%83%AB%E3%83%81%E3%83%96%E3%83%BC%E3%83%AA%E3%82%A2%E3%83%B3.mp4">../_images/boolean_demo_%E3%83%9E%E3%83%AB%E3%83%81%E3%83%96%E3%83%BC%E3%83%AA%E3%82%A2%E3%83%B3.mp4</a></video></a>
+</figure>
+<img alt="../_images/Artboard3.png" src="../_images/Artboard3.png" />
+<p>選択したオブジェクトの最後のオブジェクトに複数のオブジェクトが適応されます。
+交差を選択した場合、複数のオブジェクトが全部重なってないと何も表示されないので、
+ご注意下さい。</p>
+</section>
+<section id="id4">
+<h3>シングルブーリアン<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<figure class="align-default">
+<a class="controls reference internal image-reference" href="../_images/boolean_demo_singleboolean.mp4"><video controls="controls" height="300" src="../_images/boolean_demo_singleboolean.mp4" title="../_images/boolean_demo_singleboolean.mp4" width="500"><a href="../_images/boolean_demo_singleboolean.mp4">../_images/boolean_demo_singleboolean.mp4</a></video></a>
+</figure>
+<img alt="../_images/Artboard4.png" src="../_images/Artboard4.png" />
+<p>シングルブーリアンは一つのオブジェクトが複数のオブジェクトに適応されます。</p>
+<figure class="align-default">
+<a class="controls reference internal image-reference" href="../_images/boolean_demo_singleboolean(join).mp4"><video controls="controls" height="300" src="../_images/boolean_demo_singleboolean%28join%29.mp4" title="../_images/boolean_demo_singleboolean%28join%29.mp4" width="500"><a href="../_images/boolean_demo_singleboolean%28join%29.mp4">../_images/boolean_demo_singleboolean%28join%29.mp4</a></video></a>
+</figure>
+<p>もし、統合を使用した場合、複数に一つのオブジェクトが統合されるので、当然重なります。
+一度アプライして統合されるかどうか確認してみる必要があるかもしれません。</p>
+</section>
+<section id="id5">
+<h3>スライス機能<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<figure class="align-default">
+<a class="controls reference internal image-reference" href="../_images/boolean_demo_slice.mp4"><video controls="controls" height="300" src="../_images/boolean_demo_slice.mp4" title="../_images/boolean_demo_slice.mp4" width="500"><a href="../_images/boolean_demo_slice.mp4">../_images/boolean_demo_slice.mp4</a></video></a>
+</figure>
+<img alt="../_images/Artboard5.png" src="../_images/Artboard5.png" />
+<p>最後に選択したオブジェクトを基準にしてオブジェクトをスライス（つまり、オブジェクトが分離します。）
+します。
+シングルオブジェクトブーリアン機能の画面にしかスライス使えないのでご注意下さい。</p>
+</section>
+<section id="miniconda-setting">
+<span id="id6"></span><h3>ブーリアンパネル<a class="headerlink" href="#miniconda-setting" title="Link to this heading"></a></h3>
+<figure class="align-default">
+<a class="controls reference internal image-reference" href="../_images/boolean_demo_panel.mp4"><video controls="controls" height="300" src="../_images/boolean_demo_panel.mp4" title="../_images/boolean_demo_panel.mp4" width="500"><a href="../_images/boolean_demo_panel.mp4">../_images/boolean_demo_panel.mp4</a></video></a>
+</figure>
+<img alt="../_images/Artboard2.png" src="../_images/Artboard2.png" />
+<p>パネル画面でブーリアンのON　OFFまた、
+オブジェクトの表示の確認・非表示が可能になっております。
+アプライも可能です。</p>
+</section>
+<section id="boolean-apply">
+<span id="id7"></span><h3>ブーリアンアプライ<a class="headerlink" href="#boolean-apply" title="Link to this heading"></a></h3>
+<figure class="align-default">
+<a class="controls reference internal image-reference" href="../_images/boolean_demo_singleboolean_slice.mp4"><video controls="controls" height="300" src="../_images/boolean_demo_singleboolean_slice.mp4" title="../_images/boolean_demo_singleboolean_slice.mp4" width="500"><a href="../_images/boolean_demo_singleboolean_slice.mp4">../_images/boolean_demo_singleboolean_slice.mp4</a></video></a>
+</figure>
+<p>パネルにある選択したオブジェクトの全てのブーリアンを適応するスクリプトです。
+ブーリアンの順番によっては上手くアプライ出来ないかもしれません。</p>
+<p>スライス機能などの複雑なブーリアンを使用している場合においては、
+一度複数のオブジェクトをアプライして本当に意図した分離や交差などになっているか確認するのに
+便利な機能です。</p>
+</section>
+</section>
+<section id="boolean-demo-gousei">
+<span id="id8"></span><h2>ブーリアンの便利な使い方<a class="headerlink" href="#boolean-demo-gousei" title="Link to this heading"></a></h2>
+<figure class="align-default">
+<a class="controls reference internal image-reference" href="../_images/boolean_demo_gousei.mp4"><video controls="controls" height="300" src="../_images/boolean_demo_gousei.mp4" title="../_images/boolean_demo_gousei.mp4" width="500"><a href="../_images/boolean_demo_gousei.mp4">../_images/boolean_demo_gousei.mp4</a></video></a>
+</figure>
+<p>ブーリアン適応において、順番を間違えると正常にブーリアンが適応されない場合があります。</p>
+<p>例えば、動画の例ですが、このアドオンが用意したブーリアン適応を普通に押しても、
+合成が適応されません。適応の順番を変えても同様です。</p>
+<p>この場合、一度オブジェクトで適応されたくない以外のモディファイアをオフにして、</p>
+<p>オブジェクト＞適応＞表示の形状をメッシュ化</p>
+<p>をして見てください。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to KSYN OPS&#39;s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E6%A9%9F%E8%83%BD.html" class="btn btn-neutral float-right" title="ミラー機能" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, KSYN.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
