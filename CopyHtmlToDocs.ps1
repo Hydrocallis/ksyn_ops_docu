@@ -29,7 +29,7 @@ Copy-Folder -SourceFolder "$folderName\build\html" -DestinationFolder "$folderNa
 
 
 # .nojekyllファイルをdocsフォルダに作成する
-$nojekyllFilePath = Join-Path -Path "docs" -ChildPath ".nojekyll"
+$nojekyllFilePath = Join-Path -Path "$folderName\docs" -ChildPath ".nojekyll"
 if (-not (Test-Path -Path $nojekyllFilePath)) {
     New-Item -Path $nojekyllFilePath -ItemType File
 }
