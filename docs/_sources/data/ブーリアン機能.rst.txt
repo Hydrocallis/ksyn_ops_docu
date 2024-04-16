@@ -94,7 +94,7 @@
 ブーリアンアプライ
 ==================
 
-.. figure:: boolean_demo_singleboolean(slice).mp4
+.. figure:: boolean_demo_singleboolean_slice.mp4
     :width: 500
     :height: 300
     :class: controls
