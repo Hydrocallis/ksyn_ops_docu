@@ -5,10 +5,10 @@
 
 Welcome to KSYN OPS's documentation!
 ====================================
-.. image:: ./data/Artboard1.png
+.. image:: ./ksyn_ops/Artboard1.png
 
 
-.. figure:: data/boolean_demo.mp4
+.. figure:: ksyn_ops/boolean_demo.mp4
     :width: 500
     :height: 300
     :class: controls
@@ -22,14 +22,14 @@ KSYN　OPSはSHIFT+CTRL+Qでパイメニューが表示されます。
 ショートカットの変更は下記の設定画面から変更してください。
 
 
-.. image:: ./data/sette.png
+.. image:: ./ksyn_ops/sette.png
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :caption: Contents:
 
-   data/ブーリアン機能
-   data/その他の機能
+   ksyn_ops/ブーリアン機能
+   ksyn_ops/その他の機能
 
 
 Indices and tables
