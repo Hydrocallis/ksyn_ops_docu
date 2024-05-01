@@ -11,7 +11,11 @@ KSYN OPSその他の機能
 Bevel機能
 ==========
 
-.. image:: bevel.mp4
+.. figure:: bevel.mp4
+    :width: 500
+    :height: 300
+    :class: controls
+
 
 選択したオブジェクトにBEVELを割り当てるオペレーターパネルです。
 アクティブなオブジェクトで、”Ksyn_Bebel”という名前がついているBEVELのみだけ
@@ -22,6 +26,7 @@ Bevel機能
 ==========
 ミラー機能
 ==========
+
 
 .. image:: mirror.png
 
